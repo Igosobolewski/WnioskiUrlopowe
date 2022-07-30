@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>Nowy Wniosek Urlopowy</h1>
+<div mat-dialog-content>
+  <form [formGroup]="HolidayForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Imię i Nazwisko</mat-label>
+      <input formControlName="Name" matInput placeholder="Imię i Nazwisko">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Osoba Zastępująca</mat-label>
+      <mat-select formControlName="Substitute" placeholder="Substitute">
+          <mat-option value="Pracownik1">Pracownik1</mat-option>
+          <mat-option value="Pracownik2">Pracownik2</mat-option>
+          <mat-option value="Pracownik3">Pracownik3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="example-form-field">
+      <mat-label>Podaj przedział czasowy</mat-label>
+      <mat-date-range-input [rangePicker]="rangePicker">
+        <input formControlName="Date" matStartDate placeholder="Start date">
+        <input formControlName="Date" matEndDate placeholder="End date">
+      </mat-date-range-input>
+      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+      <mat-date-range-picker #rangePicker>
+        <mat-date-range-picker-actions>
+          <button mat-button matDateRangePickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDateRangePickerApply>Zapisz</button>
+        </mat-date-range-picker-actions>
+      </mat-date-range-picker>
+    </mat-form-field>
+
+    <label for=""><h1>Rodzaj Urlopu</h1></label>
+    <mat-radio-group formControlName="Type" class="example-radio-group">
+      <mat-radio-button class="example-radio-button" *ngFor="let urlop of RodzajUrlopu" [value]="urlop">
+          {{urlop}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+      <mat-label>Komentarz dla osoby zastępującej</mat-label>
+      <textarea formControlName="Comment" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="basic" mat-dialog-close="">Zamknij</button>
+    <button mat-raised-button color="basic" style="margin-left: 10px;" (click)="AddHolidayForm()">{{actionBtn}}</button>
+
+</div>

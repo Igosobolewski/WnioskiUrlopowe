@@ -1,0 +1,87 @@
+
+  mat-toolbar {
+    display: block;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 7px 7px rgba(0,0,0,0.2);
+  }
+
+  .KpmgLogo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    transition: 200ms ease-in-out;
+  }
+
+  .KpmgLogo:hover {
+    opacity: 50%;
+  }
+
+  mat-toolbar {
+    display: flex;
+    align-items: center;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  
+  .mat-form-field-appearance-standard .mat-form-field-underline {
+    background-color: #fff;
+  }
+
+  li {
+    list-style: none;
+  }
+
+
+  .Nav_a {
+    text-decoration: none;
+    color: black;
+    transition: 300ms ease-in-out;
+    padding: 15px 40px;
+  }
+
+  .Nav_a:hover {
+    opacity: 60%;
+    border: 0;
+    box-shadow: 0 0 3px #03003b, 0 0 7px #040050, 0 0 20px#030034;
+  }
+
+  .HolidayPhoto {
+    width: 50%;
+    border-radius: 10%;
+    box-shadow: 0 7px 7px rgba(0,0,0,0.2);
+  }
+
+  .SPACER {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .SPACER h1 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 3rem;
+  }
+
+  footer {
+    display: flex; align-items: center; justify-content: center; height: 14%; margin-top: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,74,166,1) 21%, rgba(0,212,255,1) 100%); box-shadow: 0 7px 7px rgba(0,0,0,0.2);
+    
+    
+  }
